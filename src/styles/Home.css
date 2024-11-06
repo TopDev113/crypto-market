@@ -1,0 +1,128 @@
+.home {
+  padding-bottom: 100px;
+  padding: 0 10px;
+}
+.hero {
+  max-width: 900px;
+  margin: 80px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 30px;
+}
+.hero h1 {
+  font-size: max(2vw, 36px);
+}
+.hero p {
+  /* width: 75%; */
+  color: #e3e3e3;
+  line-height: 1.5;
+}
+.hero form {
+  padding: 8px;
+  width: 60%;
+  height: 40px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  border-radius: 5px;
+  gap: 10px;
+}
+.hero input {
+  flex: 1;
+  height: 100%;
+  font-size: 16px;
+  border: none;
+  padding: 0 12px;
+  border-radius: 5px 0 0 5px;
+  color: #333;
+}
+.hero input:focus {
+  outline: none;
+}
+.hero form button {
+  padding: 0 20px;
+  height: 100%;
+  background-color: #7a00ff;
+  color: white;
+  border: none;
+  border-radius: 0 5px 5px 0;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero form button:hover {
+  background-color: #5800cc;
+}
+.crypto-table {
+  width: 100%;
+  max-width: 900px;
+  background: linear-gradient(rgba(84, 3, 255, 0.15), rgba(105, 2, 153, 0.15));
+  border-radius: 15px;
+  flex-wrap: wrap;
+  text-align: center;
+  align-content: center;
+  justify-content: center;
+}
+.table-layout {
+  display: grid;
+  grid-template-columns: 0.5fr 1.5fr 1fr 1fr 1.5fr 2fr 1fr;
+  padding: 15px 20px;
+  align-items: center;
+  border-bottom: 1px solid #3c3c3c;
+}
+.market-cap {
+  text-align: center;
+}
+.table-layout:last-child {
+  border: none;
+}
+.table-layout div {
+  display: flex;
+  align-items: center;
+  text-align: left;
+  gap: 10px;
+}
+.table-layout div img {
+  width: 35px;
+}
+.table-layout .green {
+  color: green;
+}
+.table-layout .red {
+  color: red;
+}
+.operate-button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.operate-button:hover {
+  background-color: #0056b3;
+}
+@media (max-width: 768px) {
+  .table-layout {
+    grid-template-columns: 0.5fr 3fr 1fr 1fr;
+  }
+  .market-cap {
+    display: none;
+  }
+}
+@media (max-width: 500px) {
+  .table-layout div img {
+    width: 25px;
+  }
+  .table-layout {
+    font-size: 13px;
+  }
+  .hero form input {
+    width: 100px;
+  }
+}

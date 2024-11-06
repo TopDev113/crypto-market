@@ -1,24 +1,23 @@
-import { Route, Routes } from 'react-router-dom'
-import "./index.css"
-import Navbar from './components/Navbar/Navbar'
-import Home from './pages/Home/Home'
-import Coin from './pages/Coin/Coin'
-import Footer from './components/Footer/Footer'
-import Features from './components/Features/Features'
-
+import { Route, Routes } from "react-router-dom";
+import "./index.css";
+import Navbar from "./components/Navbar";
+import Home from "./pages/Home";
+import Coin from "./pages/Coin";
+import Footer from "./components/Footer";
+import Features from "./components/Features";
 
 const App = () => {
   return (
-    <div className='app'>
-      <Navbar/>
+    <div className="app">
+      <Navbar />
       <Routes>
-        <Route path='/' element={<Home/>}/>
-        <Route path='/features' element={<Features/>}/>
-        <Route path='/coin/:coinId' element={<Coin/>}/>
+        <Route path="/" element={<Home />} />
+        <Route path="/features" element={<Features />} />
+        <Route path="/coin/:coinId" element={<Coin />} />
       </Routes>
       <Footer />
     </div>
-  )
-}
+  );
+};
 
-export default App
+export default App;
