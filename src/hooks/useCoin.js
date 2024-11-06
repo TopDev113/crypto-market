@@ -57,7 +57,14 @@ const useCoinSearch = (allCoins) => {
     setDisplayCoin(filteredCoins);
   };
 
+  // useEffect((allCoins) =>{
+  //   setDisplayCoin(allCoins);
+  // });
   return { input, inputHandler, searchHandler, displayCoin, setDisplayCoin };
 };
-
-export { useCoinData, useHistoricalData, useCoinSearch };
+const useDisplayCoins = (allCoins, setDisplayCoin) => {
+  useEffect(() => {
+    setDisplayCoin(allCoins); // Update display when allCoins changes
+  }, [allCoins, setDisplayCoin]);
+};
+export { useCoinData, useHistoricalData, useCoinSearch, useDisplayCoins };

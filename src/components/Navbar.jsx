@@ -33,6 +33,9 @@ const Navbar = () => {
     }
   };
 
+  const connectWallet = () => {
+    console.log("connect wallet");
+  };
   return (
     <div className="navbar">
       <Link to="/">
@@ -49,19 +52,14 @@ const Navbar = () => {
         <li>Blog</li>
       </ul>
       <div className="navbar-right">
-        <select onChange={currencyHandler}>
-          <option value="usd">USD</option>
-          <option value="eur">EURO</option>
-          <option value="pkr">PKR</option>
-          <option value="inr">INR</option>
-        </select>
-        <ul>
-          <li>Login</li>
-        </ul>
-        <button>
-          Sign up
+        <button onClick={connectWallet}>
+          connect
           <img src={arrow} alt="arrow" />
         </button>
+        <ul>
+          <li>Login</li>
+          <li>Sign up</li>
+        </ul>
       </div>
     </div>
   );

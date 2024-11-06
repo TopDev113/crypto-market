@@ -1,13 +1,14 @@
 import { useContext, useEffect, useState } from "react";
 import "../styles/Home.css";
 import { CoinContext } from "../context/CoinContext";
-import { useCoinSearch } from "../hooks/useCoin";
+import { useCoinSearch, useDisplayCoins } from "../hooks/useCoin";
 import { Link } from "react-router-dom";
 
 const Home = () => {
   const { allCoin, currency } = useContext(CoinContext);
-  const { input, inputHandler, searchHandler, displayCoin } =
+  const { input, inputHandler, searchHandler, displayCoin, setDisplayCoin } =
     useCoinSearch(allCoin);
+  useDisplayCoins(allCoin, setDisplayCoin);
   return (
     <div className="home">
       <div className="hero">
