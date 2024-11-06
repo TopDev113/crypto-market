@@ -1,7 +1,7 @@
 import "../styles/Coin.css";
 import { useContext, useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { CoinContext } from "../components/CoinContext";
+import { CoinContext } from "../context/CoinContext.jsx";
 import LineChart from "../components/LineChart";
 import { DownArrow, UpArrow } from "../components/Icon";
 import { fetchCoinData, fetchHistoricalData } from "../actions/coinApi.js";
