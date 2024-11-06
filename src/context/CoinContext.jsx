@@ -24,7 +24,9 @@ const CoinContextProvider = (props) => {
       options
     )
       .then((response) => response.json())
-      .then((response) => setAllCoin(response))
+      .then((response) => {
+        setAllCoin(response);
+      })
       .catch((err) => console.error(err));
   };
 

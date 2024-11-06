@@ -4,7 +4,7 @@ import arrow from "../assets/arrow.png";
 import { Link } from "react-router-dom";
 import { useContext } from "react";
 import { CoinContext } from "../context/CoinContext";
-
+import { ConnectButton } from "@rainbow-me/rainbowkit";
 const Navbar = () => {
   const { setCurrency } = useContext(CoinContext);
 
@@ -52,10 +52,11 @@ const Navbar = () => {
         <li>Blog</li>
       </ul>
       <div className="navbar-right">
-        <button onClick={connectWallet}>
+        {/* <button onClick={connectWallet}>
           connect
           <img src={arrow} alt="arrow" />
-        </button>
+        </button> */}
+        <w3m-button />
         <ul>
           <li>Login</li>
           <li>Sign up</li>
