@@ -1,40 +1,43 @@
 # [Cryptoverse](https://cryptoverse2x.netlify.app/) ₿💰🤑
 
-*Cryptoverse* is a *React web application* that displays *real-time data about various Cryptocurrencies* 💰. It allows users to search for specific coins, view detailed information, and explore the top 100 coins based on market capitalization in multiple currencies.
+_Cryptoverse_ is a _React web application_ that displays _real-time data about various Cryptocurrencies_ 💰. It allows users to search for specific coins, view detailed information, and explore the top 100 coins based on market capitalization in multiple currencies.
 
-  # [Checkout Cryptoverse Website](https://cryptoverse2x.netlify.app/)
+# [Checkout Cryptoverse Website](https://cryptoverse2x.netlify.app/)
 
 ## Installation
 
 To run this project, you need to have Node.js and npm installed on your system.
 
 1. Clone the repository:
+
 ```bash
 git clone https://github.com/HamzaZaidiX/cryptoverse.git
 ```
 
 2. Install dependencies:
+
 ```bash
 npm install
 ```
 
 4. Start the development server:
+
 ```bash
 npm start
 ```
 
 ## Features
 
-- Displays the *top 100 cryptocurrencies based on market capitalization.*
+- Displays the _top 100 cryptocurrencies based on market capitalization._
 - Allows users to search for specific coins.
-- Displays detailed information about each coin, including realtime *Price, 24H change, Market cap*, and more.
-- Supports multiple currency conversions like *(PKR, USD, EURO, INR)*
+- Displays detailed information about each coin, including realtime _Price, 24H change, Market cap_, and more.
+- Supports multiple currency conversions like _(PKR, USD, EURO, INR)_
 
 ## Screenshots:
+
 ![screenshot](https://github.com/user-attachments/assets/05b1d0ba-8c2a-4814-8e97-18c5c24143c8)
 ![screenshot (2)](https://github.com/user-attachments/assets/be3996e6-baa5-43c2-a40b-24227532224a)
 ![screenshot (1)](https://github.com/user-attachments/assets/069526ef-866c-433f-bdcb-2717055fd650)
-
 
 ## Code Structure
 
@@ -45,16 +48,14 @@ npm start
 
 ## API
 
-Cryptoverse uses the *CoinGecko API* to fetch real-time cryptocurrency data. You can find the API documentation at [CoinGecko Api](https://www.coingecko.com/api/documentation/v3).
+Cryptoverse uses the _CoinGecko API_ to fetch real-time cryptocurrency data. You can find the API documentation at [CoinGecko Api](https://www.coingecko.com/api/documentation/v3).
 
 ## License
 
-This project is licensed under the *MIT License*.
+This project is licensed under the _MIT License_.
 
 ## Contributing
 
 Contributions are welcome! If you find any bugs or have suggestions for improvements, please open an issue or submit a pull request.
 
 ## Author
-
-*Cryptoverse* was created by [Hamza Zaidi](https://github.com/HamzaZaidiX).
