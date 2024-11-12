@@ -1,9 +1,10 @@
 import { useState, useEffect } from "react";
 import { fetchCoinData, fetchHistoricalData } from "../actions/coinApi";
 
-const useCoinData = (coinId, currency) => {
+const useCoinData = (coinId) => {
   const [coinData, setCoinData] = useState(null);
   const [loading, setLoading] = useState(true);
+  const [count, setCount] = useState(0);
 
   useEffect(() => {
     const getData = async () => {
@@ -14,25 +15,25 @@ const useCoinData = (coinId, currency) => {
     };
 
     getData();
-  }, [coinId, currency]);
+  }, [coinId]);
 
   return { coinData, loading };
 };
 
-const useHistoricalData = (coinId, currency) => {
+const useHistoricalData = (coinId) => {
   const [historicalData, setHistoricalData] = useState(null);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
     const getHistoricalData = async () => {
       setLoading(true);
-      const data = await fetchHistoricalData(coinId, currency);
+      const data = await fetchHistoricalData(coinId);
       setHistoricalData(data);
       setLoading(false);
     };
 
     getHistoricalData();
-  }, [coinId, currency]);
+  }, [coinId]);
 
   return { historicalData, loading };
 };
@@ -59,6 +60,7 @@ const useCoinSearch = (allCoins) => {
 
   useEffect(() => {
     if (allCoins) {
+      console.log("----allcoins----", allCoins);
       setDisplayCoin(allCoins);
     }
   }, [allCoins, setDisplayCoin]);

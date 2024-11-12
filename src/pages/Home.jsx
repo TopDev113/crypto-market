@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 const Home = () => {
   const { allCoin, currency } = useContext(CoinContext);
-  const { input, inputHandler, searchHandler, displayCoin } =
+  const { input, inputHandler, searchHandler, displayCoin, setDisplayCoin } =
     useCoinSearch(allCoin);
 
   return (

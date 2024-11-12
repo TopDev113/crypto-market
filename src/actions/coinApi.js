@@ -1,4 +1,29 @@
-const fetchCoinData = async () => {
+const fetchAllCoin = async (currency) => {
+  const options = {
+    method: "GET",
+    headers: {
+      accept: "application/json",
+      "x-cg-demo-api-key": "CG-RPq1szJCmY5LejoNSmPnqGjJ",
+    },
+  };
+
+  return fetch(
+    `https://api.coingecko.com/api/v3/coins/markets?vs_currency=${currency.name}`,
+    options
+  )
+    .then((response) => {
+      if (!response.ok) {
+        throw new Error("Network response was not ok");
+      }
+      return response.json();
+    })
+    .then((data) => {
+      return data; // Return data for later use
+    })
+    .catch((err) => console.error(err));
+};
+
+const fetchCoinData = async (coinId) => {
   const options = {
     method: "GET",
     headers: {
@@ -9,11 +34,13 @@ const fetchCoinData = async () => {
 
   fetch(`https://api.coingecko.com/api/v3/coins/${coinId}`, options)
     .then((response) => response.json())
-    .then((response) => setCoinData(response))
+    .then((response) => {
+      return response;
+    })
     .catch((err) => console.error(err));
 };
 
-const fetchHistoricalData = async () => {
+const fetchHistoricalData = async (coinId, currency) => {
   const options = {
     method: "GET",
     headers: {
@@ -27,8 +54,10 @@ const fetchHistoricalData = async () => {
     options
   )
     .then((response) => response.json())
-    .then((response) => setHistoricalData(response))
+    .then((response) => {
+      return response;
+    })
     .catch((err) => console.error(err));
 };
 
-export { fetchCoinData, fetchHistoricalData };
+export { fetchCoinData, fetchHistoricalData, fetchAllCoin };
